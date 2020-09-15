@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Qualifications</title>
+    <style>
+      .collapsible {
+        background-color: white;
+        color: #567d46;
+        cursor: pointer;
+        padding: 10px 20px;
+        width: 50%;
+        border-color: #567d46;
+        border-width: 3px;
+        border-style: solid;
+        text-align: left;
+        align-content: center;
+        outline: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        border-radius: 9px;
+        font-family: 'Oswald', sans-serif;
+      }
+      
+      .active, .collapsible:hover {
+        background-color: #567d46;
+        color: white;
+      }
+      
+      .content {
+        padding-top: 20px;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+        display: none;
+        overflow: hidden;
+      }
+
+      button{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        </h4><a style="text-decoration:none; color: rgb(226, 226,226);" href="index.html">Andrea</a></h4>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="aboutMe.html">About Me</a>
+        </li>
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a href="technical.html">Qualifications</a>
+        </li>
+        <li>
+          <a href="service.html">Service</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div style="align-content: center; text-align: center;">
+        <div id="first-div" style="font-family: 'Oswald', sans-serif; text-transform: uppercase;"><h2>Qualifications</h2></div>
+        <button type="button" class="collapsible">Languages</button>
+          <div class="content">
+            <h1 style="color: #567d46; font-family: 'Oswald'; font-size: 20px;">C++<br>
+              Java<br>
+              SQL<br>
+              Python<br>
+              C#<br>
+              HTML/CSS<br>
+              <a href="https://help.salesforce.com/articleView?id=code_about.htm&type=5">Apex</a><br>
+              Spanish
+            </h1>
+          </div>
+          <br>
+          <button type="button" class="collapsible">Interests</button>
+          <div class="content">
+            <h1 class="smaller" style="color: #567d46; font-family: 'Oswald'; margin: 0px 30%;">
+              With the experience that I have, I found that I really enjoy backend or full stack development. In my first internship I developed
+              a Portfolio Website application using the .Net Framework. I enjoyed having been part of the whole process and having
+              understanding on how it all works together. In Compassion I worked in backend and I really enjoyed that as well. Something that I do 
+              not have much expereince with is mobile development. It is something that I want to start working on soon because it interests me. 
+            </h1>
+          </div>
+          <br>
+          <button type="button" class="collapsible">Resume</button>
+          <div class="content">
+            <img class="qimg" style="padding-top: 15px;" src="ResumeImg.jpg">
+            <br>
+            <a class="btn" href="AndreaEspinoza20.pdf">Resume Dowload</a>
+            <a class="btn" href="https://www.smore.com/wusfq-early-college-high-school-mc">Hispanic Scholar*</a>
+            <br>
+            <br>
+            <p>*Scroll to the bottom of the link</p>
+            
+        </div>
+        
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("resume");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+  <script src = "javascript/main.js"></script>
+</html>
