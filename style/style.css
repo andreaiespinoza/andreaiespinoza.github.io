@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
 
 *{
   margin: 0px;
   padding: 0px;
   border: 0px;
   box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
 }
 nav{
   display:flex;
@@ -19,6 +27,12 @@ nav{
   background-color: white;
   font-family: 'Oswald', sans-serif;
   z-index:2;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+nav:hover{
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .logo{
   color: #567d46;
@@ -41,6 +55,14 @@ nav{
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover{
+  background-color: rgba(86, 125, 70, 0.1);
+  transform: translateY(-2px);
 }
 
 .burger div{
@@ -146,18 +168,6 @@ nav{
   margin: 0px auto;
 }
 
-.container .box{
-  position: relative;
-  width: calc(400px - 30px);
-  height: calc(300px - 30px);
-  background: #000000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
 .container .box .icons{
   position: absolute;
   top: 0;
@@ -243,12 +253,22 @@ nav{
   border: solid #567d46 3px;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(86, 125, 70, 0.2);
 }
 
 .btn:hover{
   color: white;
   border-color: #567d46;
   background-color: #567d46;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(86, 125, 70, 0.3);
+}
+
+.btn:active{
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(86, 125, 70, 0.2);
 }
 
 .qimg{
@@ -414,4 +434,84 @@ nav{
 
 .toggle .line3{
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Footer Styles */
+footer{
+  background-color: #567d46;
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover{
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer-content{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links{
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-links a{
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.footer-copyright{
+  margin-top: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Improved Portfolio Cards */
+.container .box{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: #000000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.container .box:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
