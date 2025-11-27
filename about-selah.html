@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="About Selah - Pause Before You Scroll. A free prayer and screen time management app for iPhone and iPad.">
+  <title>About Selah - Prayer & Screen Time App</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+      color: #333;
+    }
+    nav {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    .logo {
+      color: #567d46;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .logo a {
+      color: #567d46;
+      text-decoration: none;
+    }
+    .content-container {
+      max-width: 900px;
+      margin: 100px auto 40px;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #567d46;
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .tagline {
+      text-align: center;
+      color: #888;
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .app-icon {
+      text-align: center;
+      font-size: 80px;
+      margin: 30px 0;
+    }
+    .intro {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+    .section {
+      margin: 40px 0;
+    }
+    .section h2 {
+      color: #567d46;
+      font-size: 28px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #567d46;
+      padding-bottom: 10px;
+    }
+    .section p {
+      color: #444;
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .feature-card {
+      background: rgba(86, 125, 70, 0.05);
+      border-left: 4px solid #567d46;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .feature-card h3 {
+      color: #567d46;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      color: #666;
+      font-size: 14px;
+    }
+    .download-section {
+      background: linear-gradient(135deg, rgba(86, 125, 70, 0.1), rgba(86, 125, 70, 0.05));
+      border: 2px solid #567d46;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .download-section h2 {
+      color: #567d46;
+      font-size: 28px;
+      margin-bottom: 15px;
+      border: none;
+    }
+    .download-button {
+      display: inline-block;
+      background-color: #567d46;
+      color: white;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 10px;
+      margin: 20px 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(86, 125, 70, 0.3);
+    }
+    .download-button:hover {
+      background-color: #456332;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(86, 125, 70, 0.4);
+    }
+    .support-section {
+      background-color: rgba(86, 125, 70, 0.1);
+      border-left: 4px solid #567d46;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .support-section h2 {
+      color: #567d46;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .support-section p {
+      color: #444;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .kofi-button {
+      display: inline-block;
+      background-color: #FF5E5B;
+      color: white;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 10px;
+      margin: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 94, 91, 0.3);
+    }
+    .kofi-button:hover {
+      background-color: #E54B48;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 94, 91, 0.4);
+    }
+    .kofi-button::before {
+      content: "☕ ";
+      font-size: 20px;
+    }
+    footer {
+      background-color: #567d46;
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: opacity 0.3s ease;
+    }
+    footer a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+      .content-container {
+        margin: 80px 10px 20px;
+        padding: 20px;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html">Andrea</a>
+    </div>
+  </nav>
+
+  <div class="content-container">
+    <div class="app-icon">✝</div>
+    <h1>Selah</h1>
+    <p class="tagline">Pause Before You Scroll</p>
+
+    <p class="intro">
+      Selah is a free iPhone and iPad app that helps you take intentional prayer breaks before opening social media and other apps. Transform mindless scrolling into moments of reflection, prayer, and connection with God.
+    </p>
+
+    <div class="section">
+      <h2>What is Selah?</h2>
+      <p>
+        The word "Selah" appears throughout the Psalms and is traditionally understood as a pause for reflection. In our modern world of constant digital distractions, Selah brings this ancient practice into your daily life by creating intentional pauses before you open apps.
+      </p>
+      <p>
+        Instead of immediately diving into social media, Selah prompts you to spend 15-60 seconds in prayer, reading Scripture, or learning about unreached people groups around the world. These brief moments of pause can transform your relationship with technology and deepen your spiritual life.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>📱 App Blocking</h3>
+          <p>Choose which apps require a prayer break before opening. Uses Apple's Screen Time API for reliable blocking.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📖 Bible Verses</h3>
+          <p>Read Scripture during unlock periods. Choose from 4 translations: KJV, WEB, ASV, and Spanish Reina Valera 1909.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🌍 Unreached People Groups</h3>
+          <p>Learn about and pray for unreached people groups worldwide using Joshua Project's daily data.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🙏 Custom Prayers</h3>
+          <p>Create up to 100 personalized prayers for specific people, situations, or needs in your life.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📝 Custom Verses</h3>
+          <p>Save up to 200 custom Bible verses to memorize and meditate on during your prayer breaks.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📊 Prayer Streaks</h3>
+          <p>Track your consistency with daily unlock statistics and build meaningful habits of prayer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Why is Selah Free?</h2>
+      <p>
+        Selah uses data from the <a href="https://joshuaproject.net/" target="_blank" rel="noopener" style="color: #567d46; text-decoration: underline;">Joshua Project API</a>, which is provided for non-commercial use only. In accordance with those terms, Selah is offered completely free with no subscriptions, ads, or in-app purchases.
+      </p>
+      <p>
+        This app exists to help believers pause, pray, and stay connected to God throughout their day. It's a ministry tool, not a profit-driven product.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Privacy & Data</h2>
+      <p>
+        Your privacy is sacred. All your data—prayers, verses, statistics, and settings—stays on your device. Selah does not collect, track, or share any of your personal information. No analytics, no tracking, no data collection. Period.
+      </p>
+      <p>
+        For more details, see our <a href="privacy-policy.html" style="color: #567d46; text-decoration: underline;">Privacy Policy</a>.
+      </p>
+    </div>
+
+    <div class="download-section">
+      <h2>Download Selah</h2>
+      <p>Available for free on the App Store</p>
+      <a href="https://apps.apple.com/app/id6754172763" target="_blank" rel="noopener" class="download-button">Download on the App Store</a>
+    </div>
+
+    <div class="support-section">
+      <h2>Support the Developer</h2>
+      <p>
+        Selah is a labor of love built by an independent developer. While the app is completely free, if you've found it helpful and want to support continued development and maintenance, you can buy me a coffee!
+      </p>
+      <p style="color: #666; font-size: 14px;">
+        Your support helps cover development costs and keeps Selah free for everyone. Thank you! 🙏
+      </p>
+      <a href="https://ko-fi.com/andreaespinoza69292" target="_blank" rel="noopener" class="kofi-button">Support on Ko-fi</a>
+    </div>
+
+    <div class="section" style="text-align: center; margin-top: 40px;">
+      <p style="color: #666;">
+        Need help? Visit our <a href="support.html" style="color: #567d46; text-decoration: underline;">Support Page</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about-selah.html">About Selah</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="https://www.linkedin.com/in/andreaiespinoza" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 Andrea Espinoza. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
